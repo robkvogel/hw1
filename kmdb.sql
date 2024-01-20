@@ -101,7 +101,7 @@
 
 -- Turns column mode on but headers off
 .mode column
-.headers off
+.headers ON
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 DROP TABLE IF EXISTS movies;
@@ -141,7 +141,18 @@ CREATE TABLE studios (
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
--- TODO!
+
+INSERT INTO movies (
+    title,
+    year,
+    rating
+)
+VALUES (
+    "Batman Begins",
+    "2005",
+    "PG-13"
+);
+
 
 -- Prints a header for the movies output
 .print "Movies"
