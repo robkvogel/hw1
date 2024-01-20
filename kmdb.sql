@@ -131,7 +131,8 @@ CREATE TABLE actors (
 CREATE TABLE performances (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   movie_id INTERGER,
-  actor_id INTERGER
+  actor_id INTERGER,
+  character_name
 );
 
 CREATE TABLE studios (
@@ -141,6 +142,8 @@ CREATE TABLE studios (
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
+
+--Add Movie Data
 
 INSERT INTO movies (
     title,
@@ -152,6 +155,144 @@ VALUES (
     "2005",
     "PG-13"
 );
+
+INSERT INTO movies (
+    title,
+    year,
+    rating
+)
+VALUES (
+    "The Dark Knight",
+    "2008",
+    "PG-13"
+);
+
+INSERT INTO movies (
+    title,
+    year,
+    rating
+)
+VALUES (
+    "The Dark Knight Rises",
+    "2012",
+    "PG-13"
+);
+
+-- Add Actor Data
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Christian",
+    "Bale"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Michael",
+    "Caine"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Liam",
+    "Neeson"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Katie",
+    "Holmes"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Gary",
+    "Oldman"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Heath",
+    "Ledger"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Aaron",
+    "Eckhart"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Maggie",
+    "Gyllenhaal"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Tom",
+    "Hardy"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Joseph",
+    "Gordon-Levitt"
+);
+
+INSERT INTO actors (
+    first_name,
+    last_name
+)
+VALUES (
+    "Anne",
+    "Hathaway"
+);
+
+
+--Commands that print tables for sanity checks (should be suppressed later)
+.print ""
+.print "All Movies"
+.print "======"
+.print ""
+SELECT * from movies;
+
+.print ""
+.print "All Actors"
+.print "======"
+.print ""
+SELECT * from actors;
+
+
 
 
 -- Prints a header for the movies output
