@@ -132,7 +132,7 @@ CREATE TABLE performances (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   movie_id INTERGER,
   actor_id INTERGER,
-  character_name
+  character_name TEXT
 );
 
 CREATE TABLE studios (
@@ -278,6 +278,172 @@ VALUES (
     "Hathaway"
 );
 
+-- Add Performance Data
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    1,
+    1,
+    "Bruce Wayne"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    1,
+    2,
+    "Alfred"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    1,
+    3,
+    "Ra's Al Ghul"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    1,
+    4,
+    "Rachel Dawes"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    1,
+    5,
+    "Commissioner Gordon"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    2,
+    1,
+    "Bruce Wayne"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    2,
+    6,
+    "Joker"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    2,
+    7,
+    "Harvey Dent"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    2,
+    2,
+    "Alfred"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    2,
+    8,
+    "Rachel Dawes"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    3,
+    1,
+    "Bruce Wayne"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    3,
+    5,
+    "Commissioner Gordon"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    3,
+    9,
+    "Bane"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    3,
+    10,
+    "John Blake"
+);
+
+INSERT INTO performances (
+    movie_id,
+    actor_id,
+    character_name
+)
+VALUES (
+    3,
+    11,
+    "Selina Kyle"
+);
 
 --Commands that print tables for sanity checks (should be suppressed later)
 .print ""
@@ -292,11 +458,17 @@ SELECT * from movies;
 .print ""
 SELECT * from actors;
 
+.print ""
+.print "All Performances"
+.print "======"
+.print ""
+SELECT * from performances;
 
 
 
 -- Prints a header for the movies output
-.print "Movies"
+.print ""
+.print "Movies [Output for HW]"
 .print "======"
 .print ""
 
@@ -305,7 +477,7 @@ SELECT * from actors;
 
 -- Prints a header for the cast output
 .print ""
-.print "Top Cast"
+.print "Top Cast [Output for HW]"
 .print "========"
 .print ""
 
