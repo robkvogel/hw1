@@ -117,7 +117,7 @@ DROP TABLE IF EXISTS studios;
 CREATE TABLE movies (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT,
-  year INTERGER,
+  year INTEGER,
   rating TEXT,
   studio_id INTEGER
 );
@@ -130,8 +130,8 @@ CREATE TABLE actors (
 
 CREATE TABLE performances (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  movie_id INTERGER,
-  actor_id INTERGER,
+  movie_id INTEGER,
+  actor_id INTEGER,
   character_name TEXT
 );
 
@@ -153,7 +153,7 @@ INSERT INTO movies (
 )
 VALUES (
     "Batman Begins",
-    "2005",
+    2005,
     "PG-13",
     1
 );
@@ -166,7 +166,7 @@ INSERT INTO movies (
 )
 VALUES (
     "The Dark Knight",
-    "2008",
+    2008,
     "PG-13",
     1
 );
@@ -179,7 +179,7 @@ INSERT INTO movies (
 )
 VALUES (
     "The Dark Knight Rises",
-    "2012",
+    2012,
     "PG-13",
     1
 );
@@ -486,13 +486,19 @@ SELECT * from performances;
 SELECT * from studios;
 
 -- Prints a header for the movies output
+.headers OFF
 .print ""
 .print "Movies [Output for HW]"
 .print "======"
 .print ""
 
 -- The SQL statement for the movies output
--- TODO!
+
+SELECT movies.title, movies.year, movies.rating, studios.studio_name
+FROM movies
+INNER JOIN studios ON movies.studio_id = studios.id;
+
+
 
 -- Prints a header for the cast output
 .print ""
