@@ -499,13 +499,15 @@ FROM movies
 INNER JOIN studios ON movies.studio_id = studios.id;
 
 
-
 -- Prints a header for the cast output
 .print ""
 .print "Top Cast [Output for HW]"
 .print "========"
 .print ""
 
-
 -- The SQL statement for the cast output
--- TODO!
+
+SELECT movies.title, actors.first_name, actors.last_name, performances.character_name
+FROM movies
+INNER JOIN performances ON actors.id = performances.actor_id
+INNER JOIN actors ON performances.movie_id = movies.id ;
