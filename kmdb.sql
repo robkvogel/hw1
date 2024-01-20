@@ -148,34 +148,40 @@ CREATE TABLE studios (
 INSERT INTO movies (
     title,
     year,
-    rating
+    rating,
+    studio_id
 )
 VALUES (
     "Batman Begins",
     "2005",
-    "PG-13"
+    "PG-13",
+    1
 );
 
 INSERT INTO movies (
     title,
     year,
-    rating
+    rating,
+    studio_id
 )
 VALUES (
     "The Dark Knight",
     "2008",
-    "PG-13"
+    "PG-13",
+    1
 );
 
 INSERT INTO movies (
     title,
     year,
-    rating
+    rating,
+    studio_id
 )
 VALUES (
     "The Dark Knight Rises",
     "2012",
-    "PG-13"
+    "PG-13",
+    1
 );
 
 -- Add Actor Data
@@ -445,6 +451,15 @@ VALUES (
     "Selina Kyle"
 );
 
+-- Add Studio Data
+INSERT INTO studios (
+    studio_name
+)
+VALUES (
+    "Warner Bros."
+);
+
+
 --Commands that print tables for sanity checks (should be suppressed later)
 .print ""
 .print "All Movies"
@@ -464,7 +479,11 @@ SELECT * from actors;
 .print ""
 SELECT * from performances;
 
-
+.print ""
+.print "All Studios"
+.print "======"
+.print ""
+SELECT * from studios;
 
 -- Prints a header for the movies output
 .print ""
