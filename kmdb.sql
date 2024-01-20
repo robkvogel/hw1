@@ -459,7 +459,7 @@ VALUES (
     "Warner Bros."
 );
 
-
+/*
 --Commands that print tables for sanity checks (should be suppressed later)
 .print ""
 .print "All Movies"
@@ -484,6 +484,7 @@ SELECT * from performances;
 .print "======"
 .print ""
 SELECT * from studios;
+*/
 
 -- Prints a header for the movies output
 .headers OFF
@@ -509,5 +510,6 @@ INNER JOIN studios ON movies.studio_id = studios.id;
 
 SELECT movies.title, actors.first_name, actors.last_name, performances.character_name
 FROM movies
-INNER JOIN performances ON actors.id = performances.actor_id
-INNER JOIN actors ON performances.movie_id = movies.id ;
+INNER JOIN performances ON performances.movie_id = movies.id 
+INNER JOIN actors ON actors.id = performances.actor_id;
+
