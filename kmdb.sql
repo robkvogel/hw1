@@ -106,25 +106,38 @@
 -- Drop existing tables, so you'll start fresh each time this script is run.
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS performances;
+DROP TABLE IF EXISTS studios;
 
 --Add other tables as they are created/ dropped
 
 
-
-
 -- Create new tables, according to your domain model
--- TODO!
 
---example code
-CREATE TABLE students (
+CREATE TABLE movies (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  first_name TEXT,
-  last_name TEXT,
-  email TEXT,
-  phone_number TEXT
+  title TEXT,
+  year INTERGER,
+  rating TEXT,
+  studio_id INTEGER
 );
 
+CREATE TABLE actors (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT,
+  last_name TEXT
+);
 
+CREATE TABLE performances (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  movie_id INTERGER,
+  actor_id INTERGER
+);
+
+CREATE TABLE studios (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  studio_name TEXT
+);
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
